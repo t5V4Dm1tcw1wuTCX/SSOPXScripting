@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <!-- Copy keystone.dll next to executable -->
+  <ItemGroup>
+    <None Include="keystone.dll" CopyToOutputDirectory="PreserveNewest" Condition="Exists('keystone.dll')" />
+  </ItemGroup>
+</Project>
